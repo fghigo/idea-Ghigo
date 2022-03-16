@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background: linear-gradient(70deg, #0a0347,#e7500a,#0a0347);
+     background: linear-gradient(70deg, #0a0347,#e7500a,#0a0347);
 }
 .nombre{
     margin-left: 2rem;
@@ -30,7 +30,10 @@ body{
 }
 .navbar ul li a:hover{
     color:#0a0347;
-}
+        }
+.translate:hover{
+    transform: translate(2px, 3px);
+}        
 main img{ max-width: 100%;
 }
 aside img{ max-width: 100%;
