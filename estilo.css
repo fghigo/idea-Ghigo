@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background-color: rgb(10, 3, 71);
+    background: linear-gradient(70deg, #0a0347,#e7500a,#0a0347);
 }
 .nombre{
     margin-left: 2rem;
@@ -29,7 +29,87 @@ body{
     font-size: 1.2rem;
 }
 .navbar ul li a:hover{
-    color:#e7500a;
+    color:#0a0347;
 }
 main img{ max-width: 100%;
 }
+aside img{ max-width: 100%;
+    margin:inherit;}
+    
+    .widget form{ margin-left: 15px;}
+       
+    .footer{
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(70deg, #0a0347,#e7500a,#0a0347);
+        list-style: none;
+    }
+    .contenedor {
+        width: 90% ;
+        max-width: 1000px ;
+        margin: 20px auto ;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "header header header" 
+        "contenido contenido contenido"
+        "widget widget sidebar"
+        "footer footer footer"
+    }
+    
+    .contenedor > div,
+    .contenedor .header,
+    .contenedor .contenido,
+    .contenedor .sidebar,
+    .contenedor .widget,
+    .contenedor .footer {
+        padding: 20px;
+    }
+    .contenedor .header {
+        max-width: 100%;    
+        grid-area: header;   
+    }
+    .contenedor .contenido{
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        grid-area: contenido;
+    }
+    .contenedor .sidebar{
+        background-color: #e7500a;
+        display:grid;
+        align-items: center;
+        justify-content:center;
+        grid-area: sidebar;
+        min-height: 100px;    
+    }
+    .contenedor .widget{ 
+        background-color:#e7500a ;
+        grid-area: widget;
+    }
+    .contenedor .footer {
+        grid-area: footer;
+    }
+    @media screen and (max-width: 768px){
+        .contenedor{
+            grid-template-areas: 
+            "header header header" 
+            "contenido contenido contenido"
+            "widget widget sidebar"
+            "footer footer footer"
+        }
+    }
+        @media screen and (max-width: 425px){
+            .contenedor{
+                grid-template-areas: 
+                "header" 
+                "sidebar"
+                "contenido"
+                "widget"
+                "footer"
+                }      
+    }
+    
